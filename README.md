@@ -18,8 +18,9 @@
 
 ## 现有规范
 
-    * [前端文件目录命名规范]()
-    * [HTML编码]()
-    * [CSS/SASS编码规范]()
-    * [JAVASCRIPT编码规范]()
+    * [前端文件目录命名规范](./README.md)
+    * [HTML编码规范](./html_base_standard.md)
+    * [CSS编码规范](./css_base_standard.md)
+    * [JAVASCRIPT编码规范](./js_base_standard.md)
+    * [SASS编码规范]()
     * [RequireJS使用规范]()
