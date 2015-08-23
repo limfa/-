@@ -1,7 +1,5 @@
 # HTML编码规范
 
-HTML相关文件书写风格及注意事项规范
-
 ## 缩进
 
 统一**4个空格**缩进
@@ -157,3 +155,53 @@ HTML相关文件书写风格及注意事项规范
 #### 重要性
 
 必须
+
+
+## JAVASCRIPT分离
+
+1. 避免在HTML文件中添加事件处理函数
+2. 避免在HTML文件中出现内联JavaScript代码
+
+#### 影响
+
+不利于维护
+
+#### 例子
+
+```html
+<!-- 不推荐 -->
+<!DOCTYPE html>
+<html>
+<!-- ... -->
+<body>
+    <!-- ... -->
+    <button onclick="doSomething()">来点我呀</button>
+    <script>
+         // doSomething();
+    </script>
+</body>
+</html>
+```
+```html
+<!-- 推荐 -->
+<!DOCTYPE html>
+<html>
+<!-- ... -->
+<body>
+    <!-- ... -->
+    <button id="actionBtn">来点我呀</button>
+    <script src="script.js"></script>
+</body>
+</html>
+```
+script.js
+```js
+document.getElementById('actionBtn').onclick = function(){
+    // todo
+};
+// doSomething();
+```
+
+#### 重要性
+
+推荐
