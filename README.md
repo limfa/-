@@ -18,10 +18,10 @@
 
 ## 现有规范
 
-* [前端文件目录命名规范](./project_paths.standard.md)
-* [HTML编码规范](./html_base_standard.md)
-* [CSS编码规范](./css_base_standard.md)
-* [JAVASCRIPT编码规范](./js_base_standard.md)
-* [RequireJS使用规范](./js_base_standard.md)
-* [前端SEO基础规范](./seo_base_standard.md)
-* [SASS编码规范]()
+* [前端文件目录命名规范](./project-paths-standard.md)
+* [HTML编码规范](./html-base-standard.md)
+* [CSS编码规范](./css-base-standard.md)
+* [JAVASCRIPT编码规范](./js-base-standard.md)
+* [RequireJS使用规范](./js-base-standard.md)
+* [前端SEO基础规范](./seo-base-standard.md)
+* SASS编码规范 待续
