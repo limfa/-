@@ -25,3 +25,4 @@
 * [RequireJS使用规范](./js-base-standard.md)
 * [前端SEO基础规范](./seo-base-standard.md)
 * SASS编码规范 待续
+* CSS命名规范 待续
