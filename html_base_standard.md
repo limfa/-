@@ -205,3 +205,25 @@ document.getElementById('actionBtn').onclick = function(){
 #### 重要性
 
 推荐
+
+
+## 协议
+
+对资源的引用，需要指定具体域名时，`http`或`https`协议的，可以不需要具体指定
+
+#### 影响
+
+http与https之间的转换便捷
+
+#### 例子
+
+```html
+<!-- 不推荐 -->
+<script src="http://cdn.com/script.js"></script>
+<!-- 推荐 -->
+<script src="//cdn.com/script.js"></script>
+```
+
+#### 重要性
+
+推荐

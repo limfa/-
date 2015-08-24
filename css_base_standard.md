@@ -107,3 +107,29 @@ div:first-child {}
 #### 重要性
 
 推荐
+
+
+## 协议
+
+对资源的引用，需要指定具体域名时，`http`或`https`协议的，可以不需要具体指定
+
+#### 影响
+
+http与https之间的转换便捷
+
+#### 例子
+
+```html
+/*不推荐*/
+.example {
+    background: url(http://static.example.com/images/bg.jpg);
+}
+/*推荐*/
+.example {
+    background: url(//static.example.com/images/bg.jpg);
+}
+```
+
+#### 重要性
+
+推荐
