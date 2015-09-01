@@ -7,6 +7,7 @@ RequireJS的使用约定和注意事项
 
 1. 固定给requirejs调用的模块均以define定义
 2. 公共使用的代码库（如：插件等），则最好写成UMD的形式
+3. 写成UMD形式的代码意味着非强制依赖`requirejs`，所以不得在使用`require`来延迟加载
 
 #### 影响
 
@@ -39,6 +40,26 @@ define(['jquery'] ,function($){
 }));
 ```
 
+错误写法
+```js
+(function(factory){
+    if ( typeof define === "function" ) {
+        define(['jquery'] ,factory);
+    }else{
+        factory(jQuery);
+    }
+}(function($){
+    var plusName = 'test';
+    $.fn[plusName] =function(){
+        // todo
+        $(selector).click(function(){
+            // 此处有误：强制依赖require
+            require('other/script');
+        });
+    };
+}));
+```
+
 #### 重要性
 
 推荐
@@ -46,7 +67,8 @@ define(['jquery'] ,function($){
 
 ## paths配置
 
-在使用中，如非频繁广泛使用的模块（或第三方模块），最好不要简化模块名称，即定义在`paths`中。
+1. 在使用中，如非频繁广泛使用的模块（或第三方模块），最好不要简化模块名称，即定义在`paths`中。
+2. 模块路径都是绝对的，所以不得使用`/`、`./`等开头，`http`的除外
 
 #### 影响
 
@@ -64,6 +86,14 @@ require.config({
     }
 });
 require(['myModule1' ,'myModule2'] ,function(a ,b){
+    // todo
+});
+
+// 不推荐
+require.config({
+    // other...
+});
+require(['./plugin/myModule' ,'/lib/myModule'] ,function(a ,b){
     // todo
 });
 
