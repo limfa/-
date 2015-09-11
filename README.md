@@ -24,5 +24,5 @@
 * [JAVASCRIPT编码规范](./js-base-standard.md)
 * [RequireJS使用规范](./requirejs-use-standard.md)
 * [前端SEO基础规范](./seo-base-standard.md)
-* SASS编码规范 待续
+* [SASS编码规范](./seo-base-standard.md)
 * CSS命名规范 待续
