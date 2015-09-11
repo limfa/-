@@ -1,6 +1,6 @@
 # CSS公共样式重置
 
-```css
+```scss
 *{
     padding: 0;
     margin: 0;
@@ -10,16 +10,9 @@
 body{
     color: #000;
     background-color: #fff;
-    font: normal 14px/1.2em  "microsoft yahei", tahoma, arial ;
+    // in chrome ,the min line-height of <input> is 1.4em * 14px;why ? i do't know
+    font: normal 14px/1.4em "microsoft yahei", tahoma, arial ;
 }
-/*::-moz-selection {
-  background-color: #FFF7A8;
-  color: #444444;
-}
-::selection {
-  background-color: #A6DAFF;
-  color: #FFF;
-}*/
 iframe {
     border: none;
 }
@@ -42,30 +35,33 @@ table {
     border-spacing: 0;
 }
 td, th {
-  padding: 0;
+    padding: 0;
 }
 a {
     background: transparent;
     text-decoration:none;
     &:active, &:hover {
-      outline: 0;
+        outline: 0;
     }
 }
-hr {
-  -moz-box-sizing: content-box;
-  box-sizing: content-box;
-  height: 0;
-}
 pre {
-  overflow: auto;
-  white-space: pre;
-  white-space: pre-wrap;
-  word-wrap: break-word;
+    overflow: auto;
+    white-space: pre;
+    white-space: pre-wrap;
+    word-wrap: break-word;
 }
 button, select {
-  text-transform: none;
+    text-transform: none;
 }
 textarea {
-  overflow: auto;
+    overflow: auto;
+}
+::-moz-selection {
+    background-color: #FFF7A8;
+    color: #444444;
+}
+::selection {
+    background-color: #A6DAFF;
+    color: #FFF;
 }
 ```
