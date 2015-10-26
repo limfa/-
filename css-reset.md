@@ -1,24 +1,26 @@
 # CSS公共样式重置
 
 ```scss
+@charset 'UTF-8';
 *{
     padding: 0;
     margin: 0;
+    border: 0;
+    // !todo ie7- not compatible ,like <i> tag has font-style:italic style itself
     font: inherit;
+    // !todo ie7- not compatible ,like <a> tag has color style itself
     color: inherit;
 }
-body{
+html{
     color: #000;
-    background-color: #fff;
     // in chrome ,the min line-height of <input> is 1.4em * 14px;why ? i do't know
     font: normal 14px/1.4em "microsoft yahei", tahoma, arial ;
 }
-iframe {
-    border: none;
+body{
+    background-color: #fff;
 }
 input, button {
     outline: none;
-    border: 0;
 }
 input[type=submit], input[type=button], input[type=checkbox], input[type=radio], button {
     cursor: pointer;
@@ -27,7 +29,6 @@ ul, ol {
     list-style: none;
 }
 img {
-    border: 0;
     vertical-align: middle;
 }
 table {
@@ -40,6 +41,7 @@ td, th {
 a {
     background: transparent;
     text-decoration:none;
+    
     &:active, &:hover {
         outline: 0;
     }
@@ -55,7 +57,9 @@ button, select {
 }
 textarea {
     overflow: auto;
+    resize: none;
 }
+// reset selection style
 ::-moz-selection {
     background-color: #FFF7A8;
     color: #444444;
@@ -63,5 +67,9 @@ textarea {
 ::selection {
     background-color: #A6DAFF;
     color: #FFF;
+} 
+// remove style webkit itself : "outline: -webkit-focus-ring-color auto 5px;"
+:focus {
+    outline: none;
 }
 ```

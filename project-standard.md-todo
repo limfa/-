@@ -1,0 +1,37 @@
+app
+    components
+        compass
+            main.scss
+        cssreset
+            reset-pc.scss
+            reset-m.scss
+            reset.scss
+        jquery 
+            jquery-1.11.4.js
+            jquery-2.1.1.js
+        header
+            index.tpl       
+            main.scss
+            main.js
+        footer
+            index.tpl
+            main.scss
+    pages
+        index
+            index.tpl
+            main.scss
+            main.js
+        passport
+            index.tpl
+            main.scss
+            main.js
+        user
+            index
+                index.tpl
+                main.scss
+                main.js
+            password
+                index.tpl
+                main.scss
+                main.js
+

@@ -11,21 +11,21 @@
 // 源码目录
 source
     // 脚本
-  --script
+  --js
     // 样式
-  --style
+  --css
     // 图片
-  --image
+  --img
     // 字体
-  --font
+  --fnt
     // flash
-  --flash
+  --swf
     // 音频
-  --audio
+  --ad
     // 视频
-  --video
+  --vd
     // 其它
-  --other
+  --oth
 
 // 发布目录
 public
