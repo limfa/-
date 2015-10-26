@@ -1,7 +1,7 @@
 # CSS公共样式重置
 
 ```scss
-@charset 'UTF-8';
+@charset "UTF-8";
 *{
     padding: 0;
     margin: 0;
@@ -30,6 +30,8 @@ ul, ol {
 }
 img {
     vertical-align: middle;
+    // remove border in tag<a> 
+    border: 0;
 }
 table {
     border-collapse: collapse;
